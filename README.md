@@ -1,2 +1,4 @@
 # ListViewMVVM
 Building a User Control with User Defined Ordered List in WPF and MVVM
+
+This user control provides the same functionality as the above one. But, it is in the model, view, view model (MVVM) pattern. For clarity, the XAML for defining the user control is under the folder 'View',  the logic or interaction for controlling the user control are  in a separate file  under the folder 'ViewModel' and the data for the user control is under the folder 'Model'. The Click event for both the Up or the Down buttons are no longer implemented. Instead, data binding is used to bind the Command for the Up or the Down buttons to two relay commands, UpButtonClickCommand and DownButtonClickCommand, defined in the view model class. The selected item is bound to the SelectedListItem defined in the model class.
