@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows;
-using System.Collections.ObjectModel;
+using UpDownListViewMVVM;
 
 namespace UpDownListViewMVVMTests
 {
@@ -17,7 +17,7 @@ namespace UpDownListViewMVVMTests
             SetListForUpDownListViewWithMVVM();
         }
 
-        public UpDownListViewMVVM.UpDownListViewViewModel MvvmViewModel { set; get; }
+        public UpDownListViewViewModel MvvmViewModel { set; get; }
 
         /// <summary>
         /// Set the listed items for the UpDownListView in WPF with Prism in  MVVM
@@ -40,7 +40,7 @@ namespace UpDownListViewMVVMTests
                 };
 
             // Link the DataContext to the view model.
-            MvvmViewModel = new UpDownListViewMVVM.UpDownListViewViewModel(objects);
+            MvvmViewModel = new UpDownListViewViewModel(objects);
             upDownListViewMVVM.DataContext = MvvmViewModel;
             listBoxForMVVM.DataContext = MvvmViewModel;
         }

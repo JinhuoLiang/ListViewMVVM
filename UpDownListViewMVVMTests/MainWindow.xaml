@@ -38,6 +38,7 @@
                HorizontalAlignment="Center"
                VerticalAlignment="Stretch"
                Width="190"
-               Margin="10,5,60,5"/>
+               Margin="10,5,60,5"
+               ItemsSource="{Binding UpDownListModel.ListItems, Mode=TwoWay}"/>
     </Grid>
 </Window>
